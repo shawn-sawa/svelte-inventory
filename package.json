@@ -1,0 +1,24 @@
+{
+  "name": "svelte-inventory",
+  "version": "0.1.0",
+  "description": "Inventory Web Application built using Svelte",
+  "license": "MIT",
+  "author": "Shawn Sawa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shawn-sawa/svelte-inventory"
+  },
+  "scripts": {
+    "start": "webpack serve --mode development"
+  },
+  "dependencies": {
+    "svelte-loader": "3.1.1"
+  },
+  "devDependencies": {
+    "svelte": "3.38.2",
+    "webpack": "5.36.2",
+    "webpack-cli": "4.6.0",
+    "webpack-dev-server": "3.11.2"
+  },
+  "private": true
+}
