@@ -22,11 +22,11 @@ const App = {
         console.log('=> App.load()');
 
         const config = {
-    target: document.body,
-    props: {
-        name: 'Shawn'
-    }
-};
+            target: document.body,
+            props: {
+                name: 'Shawn'
+            }
+        };
 
         App.render(config).exec();
     },
@@ -47,5 +47,3 @@ const App = {
 window.onload = () => {
     App.init();
 };
-
-// export default App;
