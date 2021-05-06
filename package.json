@@ -9,16 +9,21 @@
     "url": "https://github.com/shawn-sawa/svelte-inventory"
   },
   "scripts": {
-    "start": "webpack serve --mode development"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public --no-clear"
   },
   "dependencies": {
-    "svelte-loader": "3.1.1"
+    "sirv-cli": "1.0.11"
   },
   "devDependencies": {
-    "svelte": "3.38.2",
-    "webpack": "5.36.2",
-    "webpack-cli": "4.6.0",
-    "webpack-dev-server": "3.11.2"
+    "@rollup/plugin-node-resolve": "13.0.0",
+    "rollup": "2.47.0",
+    "rollup-plugin-css-only": "3.1.0",
+    "rollup-plugin-livereload": "2.0.0",
+    "rollup-plugin-svelte": "7.1.0",
+    "rollup-plugin-terser": "7.0.2",
+    "svelte": "3.38.2"
   },
   "private": true
 }
