@@ -1,6 +1,8 @@
 
 import Home from './module/Home.svelte';
 
+
+
 const App = {
 
     init: function() {
@@ -10,10 +12,15 @@ const App = {
         // App.User = {};
 
         // Initialize Application State
-        // App.State = {};
+        App.State = {
+            hasHandReceipt: false,
+        };
 
         // Initialize Application Globals/Constants
         // App['TIMEOUT'] = 1000 * 60 * 30;
+
+        //? check if HR exist in storage
+        //? assume they do not 
 
         App.load();
     },
@@ -21,12 +28,17 @@ const App = {
     load: function() {
         console.log('=> App.load()');
 
+
+
         const config = {
             target: document.body,
             props: {
-                name: 'Shawn'
+                hand_receipt : App.State.hasHandReceipt,
             }
         };
+
+
+
 
         App.render(config).exec();
     },
@@ -41,6 +53,12 @@ const App = {
         App.Home = new Home(content);
 
         return this;
+    },
+
+    getHandReceipt: function() {
+        // hand_receipt : function(){
+            //check if hand rectip exist
+        // }
     }
 };
 
