@@ -20,6 +20,6 @@ $ npm start                                                         # Execute in
 
 ## Changelog
 
-| Version | Date     | Description |
-|---------|----------|-------------|
+| Version | Date     | Commit | Description |
+|---------|----------|--------|-------------|
 | 0.0.0   | 05-05-21 | [67140c7](https://github.com/shawn-sawa/svelte-inventory/commit/67140c7db8097bdc11b1d15523a9e8d8024a4b5a) | 🎉  Initial commit |
