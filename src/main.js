@@ -2,7 +2,6 @@
 import Home from './module/Home.svelte';
 
 
-
 const App = {
 
     init: function() {

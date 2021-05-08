@@ -32,7 +32,7 @@
     e.target.style.backgroundColor = "lightblue"
   };
 
-
+import {testFunction} from '../test.js'
 
 </script>
 
@@ -47,6 +47,8 @@
     drop file here
   </div>
 </div>
+
+<button on:click="{testFunction}">hello</button>
 
 <style>
   .container {
@@ -63,3 +65,5 @@
     margin: 1rem auto;
   }
 </style>
+
+

@@ -1,6 +1,6 @@
 
 (function(l, r) { if (l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (window.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(window.document);
-(function () {
+(function (__test_js) {
     'use strict';
 
     function noop() { }
@@ -706,6 +706,8 @@
     	let input;
     	let t3;
     	let div1;
+    	let t5;
+    	let button;
     	let mounted;
     	let dispose;
 
@@ -722,17 +724,21 @@
     			t3 = space();
     			div1 = element("div");
     			div1.textContent = "drop file here";
-    			add_location(span, file$2, 40, 4, 904);
-    			add_location(br, file$2, 41, 4, 953);
+    			t5 = space();
+    			button = element("button");
+    			button.textContent = "hello";
+    			add_location(span, file$2, 40, 4, 942);
+    			add_location(br, file$2, 41, 4, 991);
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "fileInput");
-    			add_location(input, file$2, 42, 4, 965);
-    			add_location(div0, file$2, 39, 2, 893);
+    			add_location(input, file$2, 42, 4, 1003);
+    			add_location(div0, file$2, 39, 2, 931);
     			attr_dev(div1, "id", "fileDrop");
     			attr_dev(div1, "class", "svelte-taa5e1");
-    			add_location(div1, file$2, 45, 2, 1017);
+    			add_location(div1, file$2, 45, 2, 1055);
     			attr_dev(div2, "class", "container svelte-taa5e1");
-    			add_location(div2, file$2, 38, 0, 866);
+    			add_location(div2, file$2, 38, 0, 904);
+    			add_location(button, file$2, 50, 0, 1197);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -747,11 +753,14 @@
     			append_dev(div0, input);
     			append_dev(div2, t3);
     			append_dev(div2, div1);
+    			insert_dev(target, t5, anchor);
+    			insert_dev(target, button, anchor);
 
     			if (!mounted) {
     				dispose = [
     					listen_dev(div1, "dragover", prevent_default(/*divDragOver*/ ctx[0]), false, true, false),
-    					listen_dev(div1, "drop", prevent_default(/*newHandReceipt*/ ctx[1]), false, true, false)
+    					listen_dev(div1, "drop", prevent_default(/*newHandReceipt*/ ctx[1]), false, true, false),
+    					listen_dev(button, "click", __test_js.testFunction, false, false, false)
     				];
 
     				mounted = true;
@@ -762,6 +771,8 @@
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div2);
+    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(button);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -814,7 +825,12 @@
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<InputHR> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ divDragOver, newHandReceipt });
+    	$$self.$capture_state = () => ({
+    		divDragOver,
+    		newHandReceipt,
+    		testFunction: __test_js.testFunction
+    	});
+
     	return [divDragOver, newHandReceipt];
     }
 
@@ -1417,5 +1433,5 @@
         App.init();
     };
 
-}());
+}(__test_js));
 //# sourceMappingURL=bundle.js.map
