@@ -1,4 +1,6 @@
 <script>
+import {testFunction} from '../test.js'
+
   // const fileDrop = document.getElementById('fileDrop')
 
   const divDragOver = (e) => {
@@ -10,18 +12,19 @@
 
   const newHandReceipt = (e) => {
 
-    let fileDrop = e.target;
-
     if (e.dataTransfer.getData("text")) {
-
       console.log('text was dropped');
+
       console.log(e.dataTransfer.getData("text"));
 
     }else if(e.dataTransfer.files){
+      console.log('file was dropped');
 
       let theText = e.dataTransfer.files[0].text();
-      theText.then((x) => console.log(x));
-      console.log('file was dropped');
+      theText.then((x) => {
+        // console.log(x);
+        testFunction(x);
+      });
 
     }else{
 
@@ -32,7 +35,7 @@
     e.target.style.backgroundColor = "lightblue"
   };
 
-import {testFunction} from '../test.js'
+
 
 </script>
 
@@ -48,7 +51,7 @@ import {testFunction} from '../test.js'
   </div>
 </div>
 
-<button on:click="{testFunction}">hello</button>
+<button on:click="{()=>{testFunction('hi')}}">hello</button>
 
 <style>
   .container {
