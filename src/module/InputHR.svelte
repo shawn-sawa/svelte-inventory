@@ -1,11 +1,38 @@
-
-
 <script>
-const fileDrop = document.getElementById('fileDrop')
+  // const fileDrop = document.getElementById('fileDrop')
+
+  const divDragOver = (e) => {
+    let fileDrop = e.target;
+    // let fileDrop = document.getElementById("fileDrop");
+    e.target.ondragleave = () => (fileDrop.style.backgroundColor = "lightblue");
+    e.target.style.backgroundColor = "red";
+  };
 
   const newHandReceipt = (e) => {
-    console.log(e);
+
+    let fileDrop = e.target;
+
+    if (e.dataTransfer.getData("text")) {
+
+      console.log('text was dropped');
+      console.log(e.dataTransfer.getData("text"));
+
+    }else if(e.dataTransfer.files){
+
+      let theText = e.dataTransfer.files[0].text();
+      theText.then((x) => console.log(x));
+      console.log('file was dropped');
+
+    }else{
+
+      console.log('i dont know what was dropped');
+
+    }
+
+    e.target.style.backgroundColor = "lightblue"
   };
+
+
 
 </script>
 
@@ -16,10 +43,7 @@ const fileDrop = document.getElementById('fileDrop')
     <input type="file" id="fileInput" />
   </div>
 
-  <div id="fileDrop" 
-    on:dragover|preventDefault={newHandReceipt}
-    on:dragover|preventDefault={newHandReceipt}
-  >
+  <div id="fileDrop" on:dragover|preventDefault={divDragOver} on:drop|preventDefault={newHandReceipt}>
     drop file here
   </div>
 </div>

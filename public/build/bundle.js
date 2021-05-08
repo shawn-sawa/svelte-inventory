@@ -722,17 +722,17 @@
     			t3 = space();
     			div1 = element("div");
     			div1.textContent = "drop file here";
-    			add_location(span, file$2, 13, 4, 185);
-    			add_location(br, file$2, 14, 4, 234);
+    			add_location(span, file$2, 40, 4, 904);
+    			add_location(br, file$2, 41, 4, 953);
     			attr_dev(input, "type", "file");
     			attr_dev(input, "id", "fileInput");
-    			add_location(input, file$2, 15, 4, 246);
-    			add_location(div0, file$2, 12, 2, 174);
+    			add_location(input, file$2, 42, 4, 965);
+    			add_location(div0, file$2, 39, 2, 893);
     			attr_dev(div1, "id", "fileDrop");
     			attr_dev(div1, "class", "svelte-taa5e1");
-    			add_location(div1, file$2, 18, 2, 298);
+    			add_location(div1, file$2, 45, 2, 1017);
     			attr_dev(div2, "class", "container svelte-taa5e1");
-    			add_location(div2, file$2, 11, 0, 147);
+    			add_location(div2, file$2, 38, 0, 866);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -750,8 +750,8 @@
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(div1, "dragover", prevent_default(/*newHandReceipt*/ ctx[0]), false, true, false),
-    					listen_dev(div1, "dragover", prevent_default(/*newHandReceipt*/ ctx[0]), false, true, false)
+    					listen_dev(div1, "dragover", prevent_default(/*divDragOver*/ ctx[0]), false, true, false),
+    					listen_dev(div1, "drop", prevent_default(/*newHandReceipt*/ ctx[1]), false, true, false)
     				];
 
     				mounted = true;
@@ -781,10 +781,31 @@
     function instance$3($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots("InputHR", slots, []);
-    	const fileDrop = document.getElementById("fileDrop");
+
+    	const divDragOver = e => {
+    		let fileDrop = e.target;
+
+    		// let fileDrop = document.getElementById("fileDrop");
+    		e.target.ondragleave = () => fileDrop.style.backgroundColor = "lightblue";
+
+    		e.target.style.backgroundColor = "red";
+    	};
 
     	const newHandReceipt = e => {
-    		console.log(e);
+    		e.target;
+
+    		if (e.dataTransfer.getData("text")) {
+    			console.log("text was dropped");
+    			console.log(e.dataTransfer.getData("text"));
+    		} else if (e.dataTransfer.files) {
+    			let theText = e.dataTransfer.files[0].text();
+    			theText.then(x => console.log(x));
+    			console.log("file was dropped");
+    		} else {
+    			console.log("i dont know what was dropped");
+    		}
+
+    		e.target.style.backgroundColor = "lightblue";
     	};
 
     	const writable_props = [];
@@ -793,8 +814,8 @@
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<InputHR> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ fileDrop, newHandReceipt });
-    	return [newHandReceipt];
+    	$$self.$capture_state = () => ({ divDragOver, newHandReceipt });
+    	return [divDragOver, newHandReceipt];
     }
 
     class InputHR extends SvelteComponentDev {
