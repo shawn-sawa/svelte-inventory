@@ -1,5 +1,5 @@
 <script>
-import {testFunction} from '../test.js'
+import {extractData} from '../extractData.js'
 
   // const fileDrop = document.getElementById('fileDrop')
 
@@ -22,8 +22,7 @@ import {testFunction} from '../test.js'
 
       let theText = e.dataTransfer.files[0].text();
       theText.then((x) => {
-        // console.log(x);
-        testFunction(x);
+        extractData(x);
       });
 
     }else{
@@ -51,7 +50,12 @@ import {testFunction} from '../test.js'
   </div>
 </div>
 
-<button on:click="{()=>{testFunction('hi')}}">hello</button>
+<button on:click="{()=>{
+  fetch('./data/apr_2021_hr.html')
+  .then(res => res.text())
+  .then(data => extractData(data))
+  
+  }}">pretend drop file</button>
 
 <style>
   .container {
