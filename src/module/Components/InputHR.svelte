@@ -1,5 +1,5 @@
 <script>
-import {extractData} from '../extractData.js'
+import {extractData} from '../../extractData.js'
 
   // const fileDrop = document.getElementById('fileDrop')
 

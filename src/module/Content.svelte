@@ -1,27 +1,29 @@
 <script>
-  import PropertyTable from "./PropertyTable.svelte";
-  import InputHR from "./InputHR.svelte";
+  import PropertyTable from "./Components/PropertyTable.svelte";
+  import InputHR from "./Components/InputHR.svelte";
+  import ItemView from "./Components/ItemView.svelte";
 
-  //  let db = false;
   export let hand_receipt;
-
-
-
-
 </script>
 
-<h1>hi</h1>
+<h1>Property Tracker</h1>
 
-{#if hand_receipt}
-  You have a hand receipt
+<ItemView />
 
-  <!-- <PropertyTable {...hand_receipt}/> -->
-  <PropertyTable {hand_receipt}/>
+
+<!-- {#if hand_receipt}
+You have a hand receipt
+
+<PropertyTable {hand_receipt} />
 {:else}
-  <InputHR />
-{/if}
-
+<InputHR />
+{/if} -->
 
 <style>
-
+  h1{
+    margin: 1rem auto;
+    max-width: 300px;
+  }
 </style>
+
+<!-- <PropertyTable {...hand_receipt}/> -->
