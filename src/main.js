@@ -12,7 +12,7 @@ const App = {
 
         // Initialize Application State
         App.State = {
-            hasHandReceipt: false,
+            hasHandReceipt: localStorage['handReceipt'] ? JSON.parse(localStorage['handReceipt']) : false,
         };
 
         // Initialize Application Globals/Constants
@@ -54,11 +54,6 @@ const App = {
         return this;
     },
 
-    getHandReceipt: function() {
-        // hand_receipt : function(){
-            //check if hand rectip exist
-        // }
-    }
 };
 
 window.onload = () => {

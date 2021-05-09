@@ -23,6 +23,7 @@ import {extractData} from '../extractData.js'
       let theText = e.dataTransfer.files[0].text();
       theText.then((x) => {
         extractData(x);
+        window.location.reload()
       });
 
     }else{
@@ -53,7 +54,9 @@ import {extractData} from '../extractData.js'
 <button on:click="{()=>{
   fetch('./data/apr_2021_hr.html')
   .then(res => res.text())
-  .then(data => extractData(data))
+  .then(data => extractData(data));
+  setTimeout(()=>{window.location.reload()},100)
+  
   
   }}">pretend drop file</button>
 

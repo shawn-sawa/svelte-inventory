@@ -1,10 +1,13 @@
-export function extractData(doppedFile) {
+export async function extractData(doppedFile) {
+
   // TODO: add a check to make sure it was a hand receipt file dropped
 
+  // TODO: reload page after complete
+  
   cleanupFile(doppedFile);
 }
 
-function cleanupFile(htmlContent) {
+ function cleanupFile(htmlContent) {
   // * Create element to hold html in order to modify/extract it
   const htmlContainer = document.createElement("div");
   htmlContainer.innerHTML = htmlContent;
@@ -34,7 +37,7 @@ function cleanupFile(htmlContent) {
   collectItemData(htmlContainer);
 }
 
-function collectItemData(itemContent) {
+ function collectItemData(itemContent) {
   // * Collect all valid data
   const trs = itemContent.querySelectorAll("tr");
 
@@ -90,7 +93,7 @@ function collectItemData(itemContent) {
 //   finalStep(hrArray);
 // }
 
-function cleanupItemData(x) {
+ function cleanupItemData(x) {
 
     let hrArray = [];
   
@@ -144,7 +147,7 @@ function lcs(x) {
   return x.toString().toLowerCase();
 }
 
-function finalStep(endItems) {
+ function finalStep(endItems) {
   let endItemJson = endItems.map(buildObject);
   console.log('end item json stuff >> ',endItemJson);
 }
@@ -161,7 +164,7 @@ function scratchPaper() {
 let ctr = 0;
 
 
-function buildObject(item) {
+ function buildObject(item) {
   let itemObj = { lin: null, mpo: null, mpoDesc: null, nsn: [], nsnDetails: [] };
   let skiplist = [];
   let nsnSerialNumberHolder = {};
@@ -237,6 +240,8 @@ function buildObject(item) {
 function saveToLocalStorage(endItemData){
     if(endItemData){
         console.log('got the end item data');
+        console.log(endItemData);
+        localStorage.setItem('handReceipt', JSON.stringify(endItemData))
     }
 
 }

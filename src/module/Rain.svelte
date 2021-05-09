@@ -39,7 +39,7 @@
 
 <style>
 	:global(body) {
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 
 	span {

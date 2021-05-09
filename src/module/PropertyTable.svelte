@@ -1,25 +1,40 @@
 <script>
-    
+    export let hand_receipt;
+
+console.log(hand_receipt);
+
+//   <ul>
+	// {#each cats as { id, name }, i}
+	// 	<li><a target="_blank" href="https://www.youtube.com/watch?v={id}">
+	// 		{i + 1}: {name}
+	// 	</a></li>
+	// {/each}
+// </ul>
 </script>
 
 <table id="propertyTable">
     <thead>
       <tr>
-        <td>one</td>
-        <td>one</td>
-        <td>one</td>
+        <td>Item Number</td>
+        <td>LIN</td>
+        <td>Description</td>
       </tr>
     </thead>
 
     <tbody>
-      <tr>
-        <td>two</td>
-        <td>two</td>
-        <td>two</td>
-      </tr>
+<!-- {#each items as item,i} -->
+{#each hand_receipt as {lin,mpoDesc},i}
+  <tr>
+    <td>{i+1}</td>
+    <td>{lin}</td>
+    <td>{mpoDesc}</td>
+  </tr>
+{/each}
+
     </tbody>
   </table>
 
+  <button on:click="{()=>{localStorage.removeItem('handReceipt'); window.location.reload()}}">delete data</button>
 
   <style>
     #propertyTable,
