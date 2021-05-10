@@ -1234,7 +1234,7 @@
     	return child_ctx;
     }
 
-    // (158:14) {#each nsn.serno as serno}
+    // (150:14) {#each nsn.serno as serno}
     function create_each_block_1(ctx) {
     	let li;
     	let t_value = /*serno*/ ctx[6] + "";
@@ -1244,7 +1244,7 @@
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$2, 159, 18, 3627);
+    			add_location(li, file$2, 151, 16, 3754);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -1260,15 +1260,16 @@
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(158:14) {#each nsn.serno as serno}",
+    		source: "(150:14) {#each nsn.serno as serno}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:0) {#each nsns as nsn}
+    // (99:2) {#each nsns as nsn}
     function create_each_block$1(ctx) {
+    	let div;
     	let table;
     	let thead;
     	let tr0;
@@ -1356,6 +1357,7 @@
 
     	const block = {
     		c: function create() {
+    			div = element("div");
     			table = element("table");
     			thead = element("thead");
     			tr0 = element("tr");
@@ -1397,19 +1399,19 @@
     			tr6 = element("tr");
     			td10 = element("td");
     			b0 = element("b");
-    			b0.textContent = "ui";
+    			b0.textContent = "UI";
     			t20 = space();
     			td11 = element("td");
     			b1 = element("b");
-    			b1.textContent = "ciic";
+    			b1.textContent = "CIIC";
     			t22 = space();
     			td12 = element("td");
     			b2 = element("b");
-    			b2.textContent = "dla";
+    			b2.textContent = "DLA";
     			t24 = space();
     			td13 = element("td");
     			b3 = element("b");
-    			b3.textContent = "ohQty";
+    			b3.textContent = "OH Qty";
     			t26 = space();
     			tr7 = element("tr");
     			td14 = element("td");
@@ -1444,76 +1446,81 @@
     			td21.textContent = "View COEI!";
     			t40 = space();
     			attr_dev(td0, "colspan", "4");
-    			add_location(td0, file$2, 111, 10, 2197);
-    			add_location(tr0, file$2, 110, 8, 2181);
-    			add_location(thead, file$2, 109, 4, 2164);
-    			add_location(td1, file$2, 116, 10, 2303);
+    			attr_dev(td0, "class", "svelte-1si8ii2");
+    			add_location(td0, file$2, 103, 10, 2385);
+    			add_location(tr0, file$2, 102, 8, 2369);
+    			attr_dev(thead, "class", "svelte-1si8ii2");
+    			add_location(thead, file$2, 101, 6, 2352);
+    			add_location(td1, file$2, 108, 10, 2491);
     			attr_dev(td2, "id", "nsn");
     			attr_dev(td2, "colspan", "3");
-    			add_location(td2, file$2, 117, 10, 2327);
-    			add_location(tr1, file$2, 115, 8, 2287);
-    			add_location(td3, file$2, 120, 10, 2407);
+    			add_location(td2, file$2, 109, 10, 2515);
+    			add_location(tr1, file$2, 107, 8, 2475);
+    			add_location(td3, file$2, 112, 10, 2595);
     			attr_dev(td4, "id", "nsnDesc");
     			attr_dev(td4, "colspan", "3");
-    			add_location(td4, file$2, 121, 10, 2443);
-    			add_location(tr2, file$2, 119, 8, 2391);
-    			add_location(td5, file$2, 124, 10, 2531);
+    			add_location(td4, file$2, 113, 10, 2631);
+    			add_location(tr2, file$2, 111, 8, 2579);
+    			add_location(td5, file$2, 116, 10, 2719);
     			attr_dev(td6, "id", "nsnDesc");
     			attr_dev(td6, "colspan", "3");
-    			add_location(td6, file$2, 125, 10, 2554);
-    			add_location(tr3, file$2, 123, 8, 2515);
-    			add_location(td7, file$2, 128, 10, 2643);
+    			add_location(td6, file$2, 117, 10, 2742);
+    			add_location(tr3, file$2, 115, 8, 2703);
+    			add_location(td7, file$2, 120, 10, 2831);
     			attr_dev(td8, "id", "nsnDesc");
-    			attr_dev(td8, "colspan", "3");
-    			add_location(td8, file$2, 129, 10, 2667);
-    			add_location(tr4, file$2, 127, 8, 2627);
-    			set_style(td9, "background-color", "black");
+    			attr_dev(td8, "colspan", "");
+    			add_location(td8, file$2, 121, 10, 2855);
+    			add_location(tr4, file$2, 119, 8, 2815);
+    			attr_dev(td9, "class", "spacer-row svelte-1si8ii2");
     			attr_dev(td9, "colspan", "4");
-    			add_location(td9, file$2, 132, 10, 2750);
-    			add_location(tr5, file$2, 131, 8, 2734);
-    			add_location(b0, file$2, 135, 32, 2868);
+    			add_location(td9, file$2, 124, 10, 2937);
+    			add_location(tr5, file$2, 123, 8, 2921);
+    			add_location(b0, file$2, 127, 32, 3037);
     			set_style(td10, "width", "25%");
-    			add_location(td10, file$2, 135, 10, 2846);
-    			add_location(b1, file$2, 136, 32, 2916);
+    			add_location(td10, file$2, 127, 10, 3015);
+    			add_location(b1, file$2, 128, 32, 3085);
     			set_style(td11, "width", "25%");
-    			add_location(td11, file$2, 136, 10, 2894);
-    			add_location(b2, file$2, 137, 32, 2966);
+    			add_location(td11, file$2, 128, 10, 3063);
+    			add_location(b2, file$2, 129, 32, 3135);
     			set_style(td12, "width", "25%");
-    			add_location(td12, file$2, 137, 10, 2944);
-    			add_location(b3, file$2, 138, 32, 3015);
+    			add_location(td12, file$2, 129, 10, 3113);
+    			add_location(b3, file$2, 130, 32, 3184);
     			set_style(td13, "width", "25%");
-    			add_location(td13, file$2, 138, 10, 2993);
-    			add_location(tr6, file$2, 134, 8, 2830);
+    			add_location(td13, file$2, 130, 10, 3162);
+    			add_location(tr6, file$2, 126, 8, 2999);
     			attr_dev(td14, "id", "ui");
-    			add_location(td14, file$2, 142, 10, 3081);
+    			add_location(td14, file$2, 134, 10, 3245);
     			attr_dev(td15, "id", "ciic");
-    			add_location(td15, file$2, 143, 10, 3118);
+    			add_location(td15, file$2, 135, 10, 3282);
     			attr_dev(td16, "id", "dla");
-    			add_location(td16, file$2, 144, 10, 3159);
+    			add_location(td16, file$2, 136, 10, 3323);
     			attr_dev(td17, "id", "ohQty");
-    			add_location(td17, file$2, 145, 10, 3198);
-    			add_location(tr7, file$2, 141, 8, 3065);
-    			set_style(td18, "background-color", "black");
+    			add_location(td17, file$2, 137, 10, 3362);
+    			add_location(tr7, file$2, 133, 8, 3229);
+    			attr_dev(td18, "class", "spacer-row svelte-1si8ii2");
     			attr_dev(td18, "colspan", "4");
-    			add_location(td18, file$2, 149, 10, 3278);
-    			add_location(tr8, file$2, 148, 8, 3262);
-    			add_location(td19, file$2, 153, 10, 3382);
-    			add_location(ul, file$2, 156, 14, 3469);
+    			add_location(td18, file$2, 141, 10, 3436);
+    			add_location(tr8, file$2, 140, 8, 3420);
+    			add_location(td19, file$2, 145, 10, 3518);
+    			add_location(ul, file$2, 148, 12, 3596);
     			attr_dev(td20, "id", "serno");
     			attr_dev(td20, "colspan", "3");
-    			add_location(td20, file$2, 155, 10, 3425);
-    			add_location(tr9, file$2, 152, 8, 3366);
+    			add_location(td20, file$2, 147, 10, 3555);
+    			add_location(tr9, file$2, 144, 8, 3502);
     			attr_dev(td21, "colspan", "4");
-    			add_location(td21, file$2, 166, 10, 3779);
+    			add_location(td21, file$2, 158, 10, 3899);
     			set_style(tr10, "text-align", "center");
-    			add_location(tr10, file$2, 165, 8, 3735);
-    			add_location(tbody, file$2, 114, 6, 2270);
+    			add_location(tr10, file$2, 157, 8, 3856);
+    			add_location(tbody, file$2, 106, 6, 2458);
     			set_style(table, "backgroundColor", "lightblue");
-    			attr_dev(table, "class", "svelte-nl50uu");
-    			add_location(table, file$2, 108, 2, 2116);
+    			attr_dev(table, "class", "svelte-1si8ii2");
+    			add_location(table, file$2, 100, 4, 2302);
+    			attr_dev(div, "class", "table-background svelte-1si8ii2");
+    			add_location(div, file$2, 99, 2, 2266);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, table, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, table);
     			append_dev(table, thead);
     			append_dev(thead, tr0);
     			append_dev(tr0, td0);
@@ -1587,7 +1594,7 @@
     			append_dev(tbody, t38);
     			append_dev(tbody, tr10);
     			append_dev(tr10, td21);
-    			append_dev(table, t40);
+    			append_dev(div, t40);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*nsns*/ 2) {
@@ -1615,7 +1622,7 @@
     			}
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(table);
+    			if (detaching) detach_dev(div);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -1624,7 +1631,7 @@
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(108:0) {#each nsns as nsn}",
+    		source: "(99:2) {#each nsns as nsn}",
     		ctx
     	});
 
@@ -1632,7 +1639,8 @@
     }
 
     function create_fragment$3(ctx) {
-    	let div;
+    	let div1;
+    	let div0;
     	let table;
     	let thead;
     	let tr0;
@@ -1669,7 +1677,8 @@
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div1 = element("div");
+    			div0 = element("div");
     			table = element("table");
     			thead = element("thead");
     			tr0 = element("tr");
@@ -1711,34 +1720,39 @@
     			}
 
     			attr_dev(td0, "colspan", "3");
-    			add_location(td0, file$2, 84, 10, 1613);
-    			add_location(tr0, file$2, 83, 8, 1597);
-    			add_location(thead, file$2, 82, 4, 1580);
-    			add_location(td1, file$2, 89, 10, 1732);
-    			add_location(td2, file$2, 90, 10, 1756);
-    			add_location(tr1, file$2, 88, 8, 1716);
-    			add_location(td3, file$2, 93, 10, 1816);
-    			add_location(td4, file$2, 94, 10, 1840);
-    			add_location(tr2, file$2, 92, 8, 1800);
-    			add_location(td5, file$2, 97, 10, 1900);
-    			add_location(td6, file$2, 98, 10, 1936);
-    			add_location(tr3, file$2, 96, 8, 1884);
-    			add_location(td7, file$2, 101, 10, 2000);
-    			add_location(td8, file$2, 102, 10, 2027);
-    			add_location(tr4, file$2, 100, 8, 1984);
+    			attr_dev(td0, "class", "svelte-1si8ii2");
+    			add_location(td0, file$2, 75, 8, 1794);
+    			add_location(tr0, file$2, 74, 6, 1780);
+    			attr_dev(thead, "class", "svelte-1si8ii2");
+    			add_location(thead, file$2, 73, 4, 1765);
+    			add_location(td1, file$2, 80, 8, 1904);
+    			add_location(td2, file$2, 81, 8, 1926);
+    			add_location(tr1, file$2, 79, 6, 1890);
+    			add_location(td3, file$2, 84, 8, 1980);
+    			add_location(td4, file$2, 85, 8, 2002);
+    			add_location(tr2, file$2, 83, 6, 1966);
+    			add_location(td5, file$2, 88, 8, 2056);
+    			add_location(td6, file$2, 89, 8, 2090);
+    			add_location(tr3, file$2, 87, 6, 2042);
+    			add_location(td7, file$2, 92, 8, 2148);
+    			add_location(td8, file$2, 93, 8, 2173);
+    			add_location(tr4, file$2, 91, 6, 2134);
     			attr_dev(tbody, "id", "hrInfo");
-    			add_location(tbody, file$2, 87, 6, 1687);
-    			attr_dev(table, "class", "svelte-nl50uu");
-    			add_location(table, file$2, 81, 2, 1567);
-    			attr_dev(div, "class", "item-view svelte-nl50uu");
-    			add_location(div, file$2, 80, 0, 1540);
+    			add_location(tbody, file$2, 78, 4, 1863);
+    			attr_dev(table, "class", "highlight svelte-1si8ii2");
+    			add_location(table, file$2, 72, 2, 1734);
+    			attr_dev(div0, "class", "table-background svelte-1si8ii2");
+    			add_location(div0, file$2, 71, 2, 1700);
+    			attr_dev(div1, "class", "item-view svelte-1si8ii2");
+    			add_location(div1, file$2, 70, 0, 1673);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, table);
+    			insert_dev(target, div1, anchor);
+    			append_dev(div1, div0);
+    			append_dev(div0, table);
     			append_dev(table, thead);
     			append_dev(thead, tr0);
     			append_dev(tr0, td0);
@@ -1763,10 +1777,10 @@
     			append_dev(tr4, td7);
     			append_dev(tr4, t15);
     			append_dev(tr4, td8);
-    			append_dev(div, t17);
+    			append_dev(div1, t17);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div, null);
+    				each_blocks[i].m(div1, null);
     			}
     		},
     		p: function update(ctx, [dirty]) {
@@ -1783,7 +1797,7 @@
     					} else {
     						each_blocks[i] = create_each_block$1(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div, null);
+    						each_blocks[i].m(div1, null);
     					}
     				}
 
@@ -1797,7 +1811,7 @@
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div1);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -1819,19 +1833,19 @@
 
     	let items = [
     		{
-    			"lin": "FA20AV",
-    			"mpo": "000198527",
-    			"mpoDesc": "DTCS TACTICAL RADIO,A-9695-00X,EXELIS",
-    			"nsn": ["582001C134201"],
-    			"nsnDetails": [
+    			lin: "FA20AV",
+    			mpo: "000198527",
+    			mpoDesc: "DTCS TACTICAL RADIO,A-9695-00X,EXELIS",
+    			nsn: ["582001C134201"],
+    			nsnDetails: [
     				{
-    					"nsn": "582001C134201",
-    					"nsnDesc": "DTCS TACTICAL RADIO,A-9695-00X,EXELIS",
-    					"ui": "EA",
-    					"ciic": "U",
-    					"dla": "1014",
-    					"ohQty": "19",
-    					"serno": [
+    					nsn: "582001C134201",
+    					nsnDesc: "DTCS TACTICAL RADIO,A-9695-00X,EXELIS",
+    					ui: "EA",
+    					ciic: "U",
+    					dla: "1014",
+    					ohQty: "19",
+    					serno: [
     						"969517469",
     						"969517474",
     						"969517475",
@@ -1856,28 +1870,28 @@
     			]
     		},
     		{
-    			"lin": "C89480",
-    			"mpo": "000000586",
-    			"mpoDesc": "CAMOUFLAGE NET SYSTEM RADAR SCATTERING:",
-    			"nsn": ["1080014572956", "1080014750696"],
-    			"nsnDetails": [
+    			lin: "C89480",
+    			mpo: "000000586",
+    			mpoDesc: "CAMOUFLAGE NET SYSTEM RADAR SCATTERING:",
+    			nsn: ["1080014572956", "1080014750696"],
+    			nsnDetails: [
     				{
-    					"nsn": "1080014572956",
-    					"nsnDesc": "CAM SYS AN/USQ-150(V)",
-    					"ui": "EA",
-    					"ciic": "J",
-    					"dla": "0175",
-    					"ohQty": "2",
-    					"serno": ["4444471", "4444474"]
+    					nsn: "1080014572956",
+    					nsnDesc: "CAM SYS AN/USQ-150(V)",
+    					ui: "EA",
+    					ciic: "J",
+    					dla: "0175",
+    					ohQty: "2",
+    					serno: ["4444471", "4444474"]
     				},
     				{
-    					"nsn": "1080014750696",
-    					"nsnDesc": "CAM NET SY AN/USQ-159",
-    					"ui": "EA",
-    					"ciic": "J",
-    					"dla": "0175",
-    					"ohQty": "2",
-    					"serno": ["1005407156", "1005407158"]
+    					nsn: "1080014750696",
+    					nsnDesc: "CAM NET SY AN/USQ-159",
+    					ui: "EA",
+    					ciic: "J",
+    					dla: "0175",
+    					ohQty: "2",
+    					serno: ["1005407156", "1005407158"]
     				}
     			]
     		}
@@ -1936,7 +1950,7 @@
     			h1.textContent = "Property Tracker";
     			t1 = space();
     			create_component(itemview.$$.fragment);
-    			attr_dev(h1, "class", "svelte-1bfa914");
+    			attr_dev(h1, "class", "svelte-1xm470w");
     			add_location(h1, file$1, 8, 0, 229);
     		},
     		l: function claim(nodes) {

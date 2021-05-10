@@ -1,7 +1,7 @@
 <script>
-  import PropertyTable from "./Components/PropertyTable.svelte";
-  import InputHR from "./Components/InputHR.svelte";
-  import ItemView from "./Components/ItemView.svelte";
+  import PropertyTable from './Components/PropertyTable.svelte';
+  import InputHR from './Components/InputHR.svelte';
+  import ItemView from './Components/ItemView.svelte';
 
   export let hand_receipt;
 </script>
@@ -11,6 +11,9 @@
 <ItemView />
 
 
+
+<!-- <PropertyTable {...hand_receipt}/> -->
+
 <!-- {#if hand_receipt}
 You have a hand receipt
 
@@ -19,11 +22,10 @@ You have a hand receipt
 <InputHR />
 {/if} -->
 
+
 <style>
-  h1{
-    margin: 1rem auto;
-    max-width: 300px;
+  h1 {
+    margin: 1rem auto 5rem auto;
+    width: max-content;
   }
 </style>
-
-<!-- <PropertyTable {...hand_receipt}/> -->
